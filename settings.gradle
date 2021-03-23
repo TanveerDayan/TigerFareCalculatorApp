@@ -1,0 +1,8 @@
+rootProject.name = 'TigerFareCalculator'
+include 'domain'
+include 'application'
+include 'calculator:fare.domain'
+findProject(':calculator:fare.domain')?.name = 'fare.domain'
+include 'calculator:fare.application'
+findProject(':calculator:fare.application')?.name = 'fare.application'
+

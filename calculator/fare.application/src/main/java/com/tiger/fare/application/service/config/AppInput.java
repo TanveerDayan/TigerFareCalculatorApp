@@ -1,5 +1,7 @@
 package com.tiger.fare.application.service.config;
 
+import com.tiger.fare.domain.exception.ServiceInitializationException;
+
 public class AppInput {
 
   private String appConigFilePath;
@@ -8,8 +10,8 @@ public class AppInput {
 
   public AppInput(String[] args) {
     if (args.length < 3)
-      throw new IllegalArgumentException(
-          "Three arguments should be provided.\n1.applicationConfigPath\n2.inputFilePath\n3.errorFilePath");
+      throw new ServiceInitializationException(
+          "\nThree arguments should be provided.\n1.applicationConfigPath\n2.inputFilePath\n3.errorFilePath");
 
     this.appConigFilePath = args[0];
     this.inputFilePath = args[1];

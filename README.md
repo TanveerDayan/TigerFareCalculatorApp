@@ -9,6 +9,8 @@ To make the fares easier to understand for the commuters, the city has been divi
 ● Peak hours timings<br />
   ○ Monday - Friday   ■ 07:00 - 10:30, 17:00 - 20:00 <br />
   ○ Saturday - Sunday ■ 09:00 - 11:00, 18:00 - 22:00 <br />
+  <br />
+  <br />
  ● Off-peak hours timings <br />
   ○ All hours except the above peak hours <br />
   ○ If travelling from any station outside Zone 1 to a station in Zone 1 on the below times <br />

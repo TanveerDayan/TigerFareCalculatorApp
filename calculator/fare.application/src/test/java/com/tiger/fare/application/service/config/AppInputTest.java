@@ -1,5 +1,6 @@
 package com.tiger.fare.application.service.config;
 
+import com.tiger.fare.domain.exception.ServiceInitializationException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,6 @@ public class AppInputTest {
     String[] strArray = {
       "config", "inputPath",
     };
-    Assertions.assertThrows(IllegalArgumentException.class, () -> new AppInput(strArray));
+    Assertions.assertThrows(ServiceInitializationException.class, () -> new AppInput(strArray));
   }
 }

@@ -90,3 +90,40 @@ You can also choose to build a jar from this and run it since the jar built is f
 The command to run the jar is as follows.
 
 java -jar tiger.fare.calculator-1.0.jar application.config input.csv error.csv
+
+## How to configure application.config?
+
+If you see the file, you will know that 1_1_P means fare rate configured to travel from Zone-1 to Zone-1 during Peak time.
+Similarly, 1_2_O means fare rate configured to travel from Zone-1 to Zone-2 during Off-peak time.
+
+DayCap_1_1 means the configured day cap for traveling from Zone-1 to Zone-1
+
+WeekCap_1_1 means the configured week cap for traveling from Zone-1 to Zone-1
+
+WeekDayMorningPeakTimeStart means the start time of peak hour for the mornings of weekday.
+
+## How to create your input.csv?
+
+If you see the file, you will find 7 columns.
+
+1. Column1 - year of travel 
+2. Column2 - month of travel
+3. Column3 - day of travel
+4. Column4 - hour of travel
+5. Column5 - minute of travel
+6. Column6 - from Zone number of travel
+7. Column7 - to Zone number of travel
+
+## Main Class
+
+The main class in Application.java which is present in the fare.domain submodule in the package 
+
+path for main class - fare.application/src/main/java/com/tiger/fare/application/Application.java 
+
+## JUnit Test cases
+
+Junit test cases has been completed for both the fare.application and fare.domain submodules.
+
+
+
+

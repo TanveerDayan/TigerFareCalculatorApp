@@ -89,4 +89,4 @@ You can also choose to build a jar from this and run it since the jar built is f
 
 The command to run the jar is as follows.
 
-java -jar <<jar file name>> application.config input.csv error.csv
+java -jar tiger.fare.calculator-1.0.jar application.config input.csv error.csv

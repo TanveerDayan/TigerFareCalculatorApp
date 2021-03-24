@@ -66,4 +66,5 @@ public class Date {
     return !(localDate().getDayOfWeek().equals(DayOfWeek.SATURDAY)
         && localDate().getDayOfWeek().equals(DayOfWeek.SUNDAY));
   }
+
 }

@@ -4,12 +4,9 @@ import static com.tiger.fare.domain.util.Validate.notNull;
 
 import com.tiger.fare.domain.exception.InvalidArgumentException;
 import java.time.DateTimeException;
-import java.time.DayOfWeek;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
-import java.util.Objects;
 
 /** Contains the dateTime of the journey. */
 public final class DateTime {
@@ -38,6 +35,12 @@ public final class DateTime {
   public int weekNumber() {
     long epoch = dateTime().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
     double floor = Math.floor(epoch / (1000 * 60 * 60 * 24 * 7));
+    return (int) floor;
+  }
+
+  public int dayNumber() {
+    long epoch = dateTime().atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+    double floor = Math.floor(epoch / (1000 * 60 * 60 * 24));
     return (int) floor;
   }
 

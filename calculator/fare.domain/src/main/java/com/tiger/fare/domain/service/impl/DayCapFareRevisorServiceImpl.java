@@ -1,6 +1,5 @@
 package com.tiger.fare.domain.service.impl;
 
-import com.tiger.fare.domain.Date;
 import com.tiger.fare.domain.FareDetail;
 import com.tiger.fare.domain.comparator.FareDetailDateTimeComparator;
 import com.tiger.fare.domain.comparator.ZoneTravelDetailComparator;
@@ -39,10 +38,10 @@ public class DayCapFareRevisorServiceImpl implements FareRevisorService {
 
     logger.log(Level.INFO, String.format("Starting revision of fareDetails."));
 
-    Map<Date, List<FareDetail>> dateGroupedFareDetails =
+    Map<Integer, List<FareDetail>> dateGroupedFareDetails =
         fareDetails
             .stream()
-            .collect((Collectors.groupingBy(fareDetail -> fareDetail.journey().dateTime().date())));
+            .collect((Collectors.groupingBy(fareDetail -> fareDetail.journey().dateTime().dayNumber())));
 
     int cap =
         config.cap(
